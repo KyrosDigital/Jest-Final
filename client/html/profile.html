@@ -1,0 +1,99 @@
+<template name="profile">
+{{#if currentUser}}
+	<!-- profile -->
+	<div id="profile-wrap">
+		<center>
+			{{#with UserImages}}
+			<img src="{{image}}" class="profile-img">
+			{{else}}
+			<img src="github.svg" class="profile-img">
+			<form class="edit-profile" enctype="multipart/form-data">
+				<label for="profileImage">Choose Profile Image</label>
+				<span id="filename"></span>
+				<input type="file" name="profileImage" id="profileImage" class="black profileImage">
+				<br>
+				<button type="submit" value="Upload Photo" id="profile-btn" class="btn btn-sml btn-primary">Upload Photo</button>
+			</form>
+			{{/with}}
+			<h1 class="username">{{username}}</h1>
+			<h3>{{email}}</h3>
+				<div class="" id="">
+					<img src="laugh.png" class="profile-smiley" id="laugh">
+					<img src="frown.png" class="profile-smiley" id="frown">
+					<img src="puke.png" class="profile-smiley" id="puke">
+				</div>
+				<div class="score" id="">
+					<h3 class="count red block">{{userLaughScore}}</h3>
+					<h3 class="count yellow block">{{userFrownScore}}</h3>
+					<h3 class="count green block">{{userPukeScore}}</h3>
+				</div>
+		</center>
+	</div>
+	<!-- End profile -->
+
+	{{#each userJokes}}
+	<!-- Joke -->
+	<div class="joke">
+		<div class="row">
+			<div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
+				<h1 class="joke-title">{{jokeName}}</h1>
+				<p class="meta">Author: {{author}}</p>
+				<p class="meta">Posten On: {{date}}</p>
+			</div>
+			<div class=".col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" id="vote">
+				<img src="laugh.png" class="smiley" id="laugh">
+				<img src="frown.png" class="smiley" id="frown">
+				<img src="puke.png" class="smiley" id="puke">
+			</div>
+			<div class="row" id="score">
+				<h3 class="count red block">{{laughScore}}</h3>
+				<h3 class="count yellow block">{{frownScore}}</h3>
+				<h3 class="count green block">{{pukeScore}}</h3>
+			</div>
+		</div>
+
+		<p class="regular joke-desc">"{{jokePost}}"</p>
+		<button class="btn btn-sml btn-danger" id="delete-joke">Delete Joke</button>
+
+	</div>
+	<!-- End Joke -->
+	{{else}}
+	<h1>no jokes to display</h1>
+	{{/each}}
+
+<!-- Js for switching file picker span -->
+<script type="text/javascript">
+	$(function() {
+		$("#profileImage:file").change(function () {
+			var fileName = $(this).val();
+			$("span").text(fileName);
+			$("label").hide();
+		});
+	});
+</script>
+
+{{/if}}
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

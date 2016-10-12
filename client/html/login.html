@@ -1,0 +1,15 @@
+<template name="login">
+	{{#if currentUser}}
+	<h3 class="black">You are logged in. return <a href="/jokes">home</a></h3>
+	{{else}}
+	<form class="form-signin">
+		<h2 class="form-signin-heading">Account Login</h2>
+		<label for="email" class="sr-only">Email Address</label>
+		<input type="email" name="email" id="email" class="form-control" placeholder="Email Address">
+		<label for="password" class="sr-only">Password</label>
+		<input type="password" name="password" id="password" class="form-control" placeholder="Password">
+		<button type="submit" id="login-btn" class="btn btn-lg btn-primary btn-block">Log In</button>
+		<p>No Account? <a href="/signup">Create Account</a></p>
+	</form>
+	{{/if}}
+</template>

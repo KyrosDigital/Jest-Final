@@ -1,0 +1,19 @@
+.form-signin {
+	width: 100%;
+	max-width: 500px;
+}
+
+.form-control {
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+#login-btn {
+	margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .form-signin {
+	padding: 0px 30px 0px 30px;
+	}
+}

@@ -1,0 +1,73 @@
+<template name="rankings">
+{{#if currentUser}}
+	<!-- Highest Laugh -->
+	<div id="profile-wrap">
+		<center>
+			<h1>the Laugh King</h1>
+			{{#with laughKingPic}}
+			<img src="{{image}}" class="profile-img">
+			{{else}}
+			<img src="github.svg" class="profile-img">
+			{{/with}}
+			<h3>{{laughKing.username}}</h3>
+			<div>
+				<img src="laugh.png" class="profile-smiley" id="laugh">
+			</div>
+			<div class="score" id="">
+				<h3 class="count red block">{{laughKing.profile.laughScore}}</h3>	
+			</div>
+		</center>
+	</div>
+	<!-- End Highest Laugh -->
+
+	<!-- Highest frown -->
+	<div id="profile-wrap">
+		<center>
+			<h1>the Frown King</h1>
+			{{#with frownKingPic}}
+			<img src="{{image}}" class="profile-img">
+			{{else}}
+			<img src="github.svg" class="profile-img">
+			{{/with}}
+			<h3>{{frownKing.username}}</h3>
+			<div>
+				<img src="frown.png" class="profile-smiley" id="frown">
+			</div>
+			<div class="score" id="">
+				<h3 class="count yellow block">{{frownKing.profile.frownScore}}</h3>	
+			</div>
+		</center>
+	</div>
+	<!-- End Highest frown -->
+
+	<!-- Highest puke -->
+	<div id="profile-wrap">
+		<center>
+			<h1>the Puke King</h1>
+			{{#with pukeKingPic}}
+			<img src="{{image}}" class="profile-img">
+			{{else}}
+			<img src="github.svg" class="profile-img">
+			{{/with}}
+			<h3>{{pukeKing.username}}</h3>
+			<div>
+				<img src="puke.png" class="profile-smiley" id="puke">
+			</div>
+			<div class="score" id="">
+				<h3 class="count green block">{{pukeKing.profile.pukeScore}}</h3>	
+			</div>
+		</center>
+	</div>
+	<!-- End Highest puke -->
+{{/if}}
+</template>
+
+
+
+
+
+
+
+
+
+

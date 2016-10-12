@@ -1,0 +1,55 @@
+#profile-wrap {
+	background-color: #eaeaea;
+	padding: 50px 20px;
+	margin-bottom: 50px;
+}
+
+.profile-img {
+	max-width: 200px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+
+.profileImage {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#profile-btn {
+	margin: 20px 20px;
+}
+
+label {
+	color: #337ab7;
+	padding: 10px 10px;
+	border: 2px solid #337ab7;
+	border-radius: 5px;
+}
+
+label:hover {
+	color: #5593c6;
+	border-color: #5593c6;
+}
+
+.profile-smiley {
+	width: 50px;
+	padding: 5px 5px;
+
+}
+
+.score {
+	padding-left: 22px;
+}
+
+#score-stable {
+	margin-left: 20px;
+
+}
+
+#left-margin-sm {
+	margin-left: 2px;
+}
